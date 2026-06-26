@@ -1,0 +1,446 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    body{
+
+    background:linear-gradient(135deg,#ffeef6,#fff8fc,#ffe4ee);
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+}
+
+.container{
+
+    background:white;
+
+    width:420px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+h1{
+
+    color:#ff4f8b;
+
+    margin-bottom:20px;
+
+}
+
+p{
+
+    margin:15px 0;
+
+    font-size:18px;
+
+}
+
+.buttons{
+
+    margin-top:30px;
+
+}
+
+button{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ff4f8b;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    margin:10px;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+.hidden{
+    display:none;
+}
+
+.loveCard{
+
+    background:#fff6fa;
+
+    border-radius:15px;
+
+    padding:15px;
+
+    margin:12px 0;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.loveCard:hover{
+
+    transform:scale(1.03);
+
+}
+
+.envelope{
+
+    font-size:100px;
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.letter{
+
+    text-align:left;
+
+    white-space:pre-line;
+
+    line-height:1.8;
+
+    margin-top:25px;
+
+    font-size:18px;
+
+    min-height:250px;
+
+}
+
+.quizOption{
+
+    display:block;
+
+    width:100%;
+
+    margin:15px 0;
+
+}
+
+.glow{
+
+    color:#ff4f8b;
+
+    font-size:60px;
+
+    animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:0 0 10px pink;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 20px hotpink,
+        0 0 40px deeppink,
+        0 0 70px pink;
+
+    }
+
+}
+
+.finalMessage{
+
+    margin-top:25px;
+
+    line-height:2;
+
+    font-size:20px;
+
+}
+
+/* Floating decorations */
+
+.decorations{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.decor{
+
+    position:absolute;
+
+    font-size:30px;
+
+    animation:float 8s infinite ease-in-out;
+
+    opacity:.75;
+
+}
+
+.decor:nth-child(1){
+
+left:8%;
+top:10%;
+
+}
+
+.decor:nth-child(2){
+
+left:85%;
+top:18%;
+
+animation-delay:2s;
+
+}
+
+.decor:nth-child(3){
+
+left:18%;
+top:75%;
+
+animation-delay:4s;
+
+}
+
+.decor:nth-child(4){
+
+left:78%;
+top:82%;
+
+animation-delay:1s;
+
+}
+
+.decor:nth-child(5){
+
+left:50%;
+top:8%;
+
+animation-delay:3s;
+
+}
+
+.decor:nth-child(6){
+
+left:45%;
+top:88%;
+
+animation-delay:5s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px) rotate(0deg);
+
+}
+
+50%{
+
+transform:translateY(-20px) rotate(10deg);
+
+}
+
+100%{
+
+transform:translateY(0px) rotate(0deg);
+
+}
+
+}
+
+/* Loading Screen */
+
+#loadingScreen{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(135deg,#ffeef6,#fff8fc,#ffe4ee);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.loaderCard{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    width:380px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.loaderCard h1{
+
+    font-size:60px;
+
+}
+
+.loaderCard h2{
+
+    color:#ff4f8b;
+
+    margin:15px 0;
+
+}
+
+.loadingBar{
+
+    width:100%;
+
+    height:18px;
+
+    background:#ffd9e8;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-top:25px;
+
+}
+
+#progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:#ff4f8b;
+
+    animation:loading 3s linear forwards;
+
+}
+
+@keyframes loading{
+
+from{
+
+width:0%;
+
+}
+
+to{
+
+width:100%;
+
+}
+
+}
+
+#readyMessage{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    color:#ff4f8b;
+
+    font-weight:bold;
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
